@@ -72,6 +72,10 @@ platform:
   os: linux
   arch: amd64
 
+workspace:
+  base: /drone/src
+  path: ${DRONE_REPO_NAME}
+
 clone:
   disable: true
 
@@ -84,7 +88,7 @@ steps:
     - clone
     remote: https://github.com/${DRONE_REPO}
     branch: ${DRONE_SOURCE_BRANCH}
-    path: /drone/src
+    path: /drone/src/${DRONE_REPO_NAME}
     netrc_machine: github.com
     netrc_username:
       from_secret: github_username
@@ -116,7 +120,7 @@ steps:
     - push
     remote: https://github.com/${DRONE_REPO}
     branch: master
-    path: /drone/src
+    path: /drone/src/${DRONE_REPO_NAME}
     netrc_machine: github.com
     netrc_username:
       from_secret: github_username
