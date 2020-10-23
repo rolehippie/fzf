@@ -146,7 +146,7 @@ steps:
   pull: always
   settings:
     webhook:
-      form_secret: gitter_webhook
+      from_secret: gitter_webhook
 
 trigger:
   ref:
