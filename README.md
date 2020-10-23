@@ -1,6 +1,6 @@
 # fzf
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/fzf) [![Build Status](https://img.shields.io/drone/build/rolehippie/fzf?logo=drone&server=https%3A%2F%2Fcloud.drone.io)](https://cloud.drone.io/rolehippie/fzf) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/fzf)](https://github.com/rolehippie/fzf/blob/master/LICENSE) 
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/fzf) [![Build Status](https://img.shields.io/drone/build/rolehippie/fzf?logo=drone)](https://cloud.drone.io/rolehippie/fzf) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/fzf)](https://github.com/rolehippie/fzf/blob/master/LICENSE) 
 
 Ansible role to install the command-line fuzzy finder. 
 
