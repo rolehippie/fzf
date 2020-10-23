@@ -142,7 +142,7 @@ platform:
 
 steps:
 - name: notify
-  image: appleboy/gitter:latest
+  image: plugins/gitter:latest
   pull: always
   settings:
     webhook:
