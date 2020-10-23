@@ -1,0 +1,12 @@
+# Standards: 1.2
+---
+# @var fzf_static_version:description: Version of the static release
+fzf_static_version: 0.21.1
+
+# @var fzf_binary_download:description: URL to download the static binary
+fzf_binary_download: https://github.com/junegunn/fzf-bin/releases/download/{{ fzf_static_version }}/fzf-{{ fzf_static_version }}-linux_amd64.tgz
+
+# @var fzf_wrapper_download:description: URL to download the tmux wrapper
+fzf_wrapper_download: https://raw.githubusercontent.com/junegunn/fzf/{{ fzf_static_version }}/bin/fzf-tmux
+
+...

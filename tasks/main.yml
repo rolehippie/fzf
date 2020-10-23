@@ -1,0 +1,34 @@
+# Standards: 1.2
+---
+- name: Install required packages
+  when: ansible_distribution_version is version('19.10', '>=')
+  package:
+    name: fzf
+    state: present
+  tags:
+    - fzf
+
+- name: Install static binary
+  when: ansible_distribution_version is version('19.04', '<=')
+  unarchive:
+    src: "{{ fzf_binary_download }}"
+    dest: /usr/bin
+    remote_src: True
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=rx
+  tags:
+    - fzf
+
+- name: Install tmux wrapper
+  when: ansible_distribution_version is version('19.04', '<=')
+  get_url:
+    url: "{{ fzf_wrapper_download }}"
+    dest: /usr/bin/fzf-tmux
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=rx
+  tags:
+    - fzf
+
+...

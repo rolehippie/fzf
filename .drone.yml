@@ -1,0 +1,163 @@
+---
+kind: pipeline
+name: linting
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: later
+  image: toolhippie/ansible-later:latest
+  pull: always
+  commands:
+  - ansible-later
+
+trigger:
+  ref:
+  - refs/heads/master
+  - refs/tags/**
+  - refs/pull/**
+
+---
+kind: pipeline
+name: testing
+
+platform:
+  os: linux
+  arch: amd64
+
+concurrency:
+  limit: 1
+
+workspace:
+  base: /drone/src
+  path: ${DRONE_REPO_NAME}
+
+steps:
+- name: molecule
+  image: toolhippie/molecule:latest
+  pull: always
+  environment:
+    OS_AUTH_URL:
+      from_secret: openstack_auth_url
+    OS_PROJECT_ID:
+      from_secret: openstack_project_id
+    OS_USERNAME:
+      from_secret: openstack_username
+    OS_PASSWORD:
+      from_secret: openstack_password
+  commands:
+  - molecule test -s default
+
+trigger:
+  ref:
+  - refs/heads/master
+  - refs/tags/**
+  - refs/pull/**
+
+depends_on:
+- linting
+
+---
+kind: pipeline
+name: readme
+
+platform:
+  os: linux
+  arch: amd64
+
+clone:
+  disable: true
+
+steps:
+- name: clone
+  image: plugins/git-action:latest
+  pull: always
+  settings:
+    actions:
+    - clone
+    remote: https://github.com/${DRONE_REPO}
+    branch: ${DRONE_SOURCE_BRANCH}
+    path: /drone/src
+    netrc_machine: github.com
+    netrc_username:
+      from_secret: github_username
+    netrc_password:
+      from_secret: github_token
+
+- name: generate
+  image: toolhippie/ansible-doctor:latest
+  pull: always
+  environment:
+    ANSIBLE_DOCTOR_LOG_LEVEL: INFO
+    ANSIBLE_DOCTOR_FORCE_OVERWRITE: true
+    ANSIBLE_DOCTOR_EXCLUDE_FILES: molecule/
+  commands:
+    - ansible-doctor
+
+- name: diff
+  image: toolhippie/git:latest
+  pull: always
+  commands:
+    - git diff
+
+- name: commit
+  image: plugins/git-action:latest
+  pull: always
+  settings:
+    actions:
+    - commit
+    - push
+    remote: https://github.com/${DRONE_REPO}
+    branch: master
+    path: /drone/src
+    netrc_machine: github.com
+    netrc_username:
+      from_secret: github_username
+    netrc_password:
+      from_secret: github_token
+    author_email: "drone@webhippie.de"
+    author_name: Drone
+    message: "[skip ci] update readme"
+  when:
+    ref:
+    - refs/heads/master
+
+trigger:
+  ref:
+  - refs/heads/master
+  - refs/pull/**
+
+depends_on:
+  - testing
+
+---
+kind: pipeline
+name: notify
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: notify
+  image: appleboy/gitter:latest
+  pull: always
+  settings:
+    webhook:
+      form_secret: gitter_webhook
+
+trigger:
+  ref:
+  - refs/heads/master
+  - refs/tags/**
+  status:
+  - failure
+
+depends_on:
+  - linting
+  - testing
+  - readme
+
+...
