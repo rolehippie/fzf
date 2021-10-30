@@ -13,6 +13,7 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
 ## Table of content
 
 * [Default Variables](#default-variables)
+  * [fzf_binary_arch](#fzf_binary_arch)
   * [fzf_binary_download](#fzf_binary_download)
   * [fzf_static_version](#fzf_static_version)
   * [fzf_wrapper_download](#fzf_wrapper_download)
@@ -24,6 +25,16 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
 
 ## Default Variables
 
+### fzf_binary_arch
+
+Architecture of the static binary
+
+#### Default value
+
+```YAML
+fzf_binary_arch: "{{ 'arm8' if ansible_architecture == 'aarch64' else 'amd64' }}"
+```
+
 ### fzf_binary_download
 
 URL to download the static binary
@@ -32,7 +43,7 @@ URL to download the static binary
 
 ```YAML
 fzf_binary_download: https://github.com/junegunn/fzf-bin/releases/download/{{ fzf_static_version
-  }}/fzf-{{ fzf_static_version }}-linux_amd64.tgz
+  }}/fzf-{{ fzf_static_version }}-linux_{{ fzf_binary_arch }}.tgz
 ```
 
 ### fzf_static_version
