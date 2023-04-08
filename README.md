@@ -1,6 +1,11 @@
 # fzf
 
-[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/fzf) [![General Workflow](https://github.com/rolehippie/fzf/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/fzf/actions/workflows/general.yml) [![Readme Workflow](https://github.com/rolehippie/fzf/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/fzf/actions/workflows/readme.yml) [![Galaxy Workflow](https://github.com/rolehippie/fzf/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/fzf/actions/workflows/galaxy.yml) [![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/fzf)](https://github.com/rolehippie/fzf/blob/master/LICENSE) [![Ansible Role](https://img.shields.io/ansible/role/51415)](https://galaxy.ansible.com/rolehippie/fzf)
+[![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&amp;logoColor=white)](https://github.com/rolehippie/fzf)
+[![General Workflow](https://github.com/rolehippie/fzf/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/fzf/actions/workflows/general.yml)
+[![Readme Workflow](https://github.com/rolehippie/fzf/actions/workflows/readme.yml/badge.svg)](https://github.com/rolehippie/fzf/actions/workflows/readme.yml)
+[![Galaxy Workflow](https://github.com/rolehippie/fzf/actions/workflows/galaxy.yml/badge.svg)](https://github.com/rolehippie/fzf/actions/workflows/galaxy.yml)
+[![License: Apache-2.0](https://img.shields.io/github/license/rolehippie/fzf)](https://github.com/rolehippie/fzf/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/role-rolehippie.fzf-blue)](https://galaxy.ansible.com/rolehippie/fzf)
 
 Ansible role to install the command-line fuzzy finder.
 
