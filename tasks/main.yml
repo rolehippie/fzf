@@ -1,4 +1,3 @@
-# Standards: 1.2
 ---
 - name: Install required packages
   when: ansible_distribution_version is version('19.10', '>=')
