@@ -1,4 +1,4 @@
-# fzf
+# workspace
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/fzf)
 [![General Workflow](https://github.com/rolehippie/fzf/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/fzf/actions/workflows/general.yml)
@@ -51,8 +51,9 @@ URL to download the static binary
 #### Default value
 
 ```YAML
-fzf_binary_download: https://github.com/junegunn/fzf-bin/releases/download/{{ fzf_static_version
-  }}/fzf-{{ fzf_static_version }}-linux_{{ fzf_binary_arch }}.tgz
+fzf_binary_download: https://github.com/junegunn/fzf-bin/releases/download/{{ 
+  fzf_static_version }}/fzf-{{ fzf_static_version }}-linux_{{ fzf_binary_arch 
+  }}.tgz
 ```
 
 ### fzf_static_version
@@ -72,14 +73,13 @@ URL to download the tmux wrapper
 #### Default value
 
 ```YAML
-fzf_wrapper_download: https://raw.githubusercontent.com/junegunn/fzf/{{ fzf_static_version
-  }}/bin/fzf-tmux
+fzf_wrapper_download: https://raw.githubusercontent.com/junegunn/fzf/{{ 
+  fzf_static_version }}/bin/fzf-tmux
 ```
 
 ## Discovered Tags
 
 **_fzf_**
-
 
 ## Dependencies
 
