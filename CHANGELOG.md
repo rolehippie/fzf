@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/rolehippie/fzf/compare/v2.0.0...v2.1.0) (2025-09-29)
+
+
+### Features
+
+* apply new repo structure and update linting and integrate noble ([8daaa75](https://github.com/rolehippie/fzf/commit/8daaa75df5428fc31ade9b7ba1807a134d1b3a02))
+
 ## [2.0.0](https://github.com/rolehippie/fzf/compare/v1.1.0...v2.0.0) (2024-02-12)
 
 
