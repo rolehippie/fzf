@@ -6,5 +6,6 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts("all")
 
 
-def test_dummy(host):
-    assert True
+def test_is_installed(host):
+    file = host.file("/usr/bin/fzf")
+    assert file.is_file
