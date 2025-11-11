@@ -13,7 +13,7 @@ Ansible role to install the command-line fuzzy finder.
 
 Building and improving this Ansible role have been sponsored by my current and previous employers like **[Cloudpunks GmbH](https://cloudpunks.de)** and **[Proact Deutschland GmbH](https://www.proact.eu)**.
 
-## Table of content
+## Table of contents
 
 - [Requirements](#requirements)
 - [Default Variables](#default-variables)
