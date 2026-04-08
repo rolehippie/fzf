@@ -51,9 +51,7 @@ URL to download the static binary
 #### Default value
 
 ```YAML
-fzf_binary_download: https://github.com/junegunn/fzf-bin/releases/download/{{ 
-  fzf_static_version }}/fzf-{{ fzf_static_version }}-linux_{{ fzf_binary_arch 
-  }}.tgz
+fzf_binary_download: https://github.com/junegunn/fzf-bin/releases/download/{{ fzf_static_version }}/fzf-{{ fzf_static_version }}-linux_{{ fzf_binary_arch }}.tgz
 ```
 
 ### fzf_static_version
@@ -73,8 +71,7 @@ URL to download the tmux wrapper
 #### Default value
 
 ```YAML
-fzf_wrapper_download: https://raw.githubusercontent.com/junegunn/fzf/{{ 
-  fzf_static_version }}/bin/fzf-tmux
+fzf_wrapper_download: https://raw.githubusercontent.com/junegunn/fzf/{{ fzf_static_version }}/bin/fzf-tmux
 ```
 
 ## Discovered Tags
