@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/rolehippie/fzf/compare/v2.2.0...v2.3.0) (2026-08-10)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-doctor to v8.4.0 ([#48](https://github.com/rolehippie/fzf/issues/48)) ([21e55a0](https://github.com/rolehippie/fzf/commit/21e55a097054eceda01bbc44b8f172b8702ded21))
+* **patch:** update dependency python to v3.14.7 ([#46](https://github.com/rolehippie/fzf/issues/46)) ([c7fb9e9](https://github.com/rolehippie/fzf/commit/c7fb9e95645327be8b13d14a235c5d75f383cddb))
+
 ## [2.2.0](https://github.com/rolehippie/fzf/compare/v2.1.0...v2.2.0) (2026-07-27)
 
 ## [2.1.0](https://github.com/rolehippie/fzf/compare/v2.0.0...v2.1.0) (2025-09-29)
