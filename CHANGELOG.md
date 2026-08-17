@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.4.0](https://github.com/rolehippie/fzf/compare/v2.3.0...v2.4.0) (2026-08-17)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-lint to v26.8.0 ([#51](https://github.com/rolehippie/fzf/issues/51)) ([9fb3c6f](https://github.com/rolehippie/fzf/commit/9fb3c6f62ac765ac5bd7ce509adce2516b08bf48))
+* **minor:** update dependency pipx:molecule to v26.8.0 ([#52](https://github.com/rolehippie/fzf/issues/52)) ([afc0a53](https://github.com/rolehippie/fzf/commit/afc0a53cfd92b04a2463bc3f1fcb4599afcca282))
+* **patch:** update dependency pipx:ansible-core to v2.21.3 ([#49](https://github.com/rolehippie/fzf/issues/49)) ([f1198bd](https://github.com/rolehippie/fzf/commit/f1198bd005ba10ed94816b8d0bc51bcffaa663a3))
+* **patch:** update dependency pre-commit to v4.6.2 ([#50](https://github.com/rolehippie/fzf/issues/50)) ([bcdb986](https://github.com/rolehippie/fzf/commit/bcdb98637032d554405fcd7d7f4001b00e5451a5))
+
 ## [2.3.0](https://github.com/rolehippie/fzf/compare/v2.2.0...v2.3.0) (2026-08-10)
 
 ### Dependencies
