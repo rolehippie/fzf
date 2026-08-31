@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.1](https://github.com/rolehippie/fzf/compare/v2.4.0...v2.4.1) (2026-08-31)
+
+### Dependencies
+
+* **patch:** update dependency pipx:ansible-doctor to v8.4.1 ([#53](https://github.com/rolehippie/fzf/issues/53)) ([96d004b](https://github.com/rolehippie/fzf/commit/96d004bb2b1e5a919df4881942040784fae6475f))
+
 ## [2.4.0](https://github.com/rolehippie/fzf/compare/v2.3.0...v2.4.0) (2026-08-17)
 
 ### Dependencies
