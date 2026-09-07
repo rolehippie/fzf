@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/rolehippie/fzf/compare/v2.4.1...v2.5.0) (2026-09-07)
+
+### Features
+
+* add separate requirements for molecule run ([232fdce](https://github.com/rolehippie/fzf/commit/232fdceb123fae50cbbb78eb1156a3b38013bb10))
+* use new required facts as attributes ([a587f4e](https://github.com/rolehippie/fzf/commit/a587f4e9fbb947831be4a16d7feb8900a1dd10b5))
+
 ## [2.4.1](https://github.com/rolehippie/fzf/compare/v2.4.0...v2.4.1) (2026-08-31)
 
 ### Dependencies
