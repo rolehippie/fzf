@@ -4,7 +4,7 @@
 fzf_static_version: 0.21.1
 
 # @var fzf_binary_arch:description: Architecture of the static binary
-fzf_binary_arch: "{{ 'arm8' if ansible_architecture == 'aarch64' else 'amd64' }}"
+fzf_binary_arch: "{{ 'arm8' if ansible_facts['architecture'] in ['aarch64', 'arm64'] else 'amd64' }}"
 
 # @var fzf_binary_download:description: URL to download the static binary
 fzf_binary_download: https://github.com/junegunn/fzf-bin/releases/download/{{ fzf_static_version }}/fzf-{{ fzf_static_version }}-linux_{{ fzf_binary_arch }}.tgz

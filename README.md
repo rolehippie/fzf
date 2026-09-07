@@ -41,7 +41,7 @@ Architecture of the static binary
 #### Default value
 
 ```YAML
-fzf_binary_arch: "{{ 'arm8' if ansible_architecture == 'aarch64' else 'amd64' }}"
+fzf_binary_arch: "{{ 'arm8' if ansible_facts['architecture'] in ['aarch64', 'arm64'] else 'amd64' }}"
 ```
 
 ### fzf_binary_download
